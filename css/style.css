@@ -1,0 +1,163 @@
+body {
+  background-color: #bfc9ca;
+  border: 4px solid black;
+  border-radius: 5%;
+  border-left: none;
+  border-right: none;
+  border-width: 2px;
+}
+
+.langWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #bfc9ca;
+  color: white;
+}
+
+#anch1 {
+  padding: 5px;
+
+  color: black;
+}
+
+a.active {
+  background-color: #868d86;
+}
+
+a:hover {
+  width: 40px;
+  transition: width 400ms ease;
+  color: #1f201f;
+}
+
+div.container {
+  display: grid;
+  grid-template-columns: 290px 0px auto;
+  grid-template-rows: 600px;
+}
+
+div.left-side {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+div.right-side {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: white;
+}
+
+#leftLink {
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+h3 {
+  display: block;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0.67em;
+  margin-left: 7;
+  margin-right: 0;
+  font-weight: bold;
+  animation: text2 4s 1;
+}
+
+@keyframes text2 {
+  0% {
+    /* transform: rotate(90deg); */
+    display: none;
+  }
+
+  30% {
+    transform: rotate(300deg);
+    display: none;
+  }
+}
+
+/*************All headings**************/
+
+h2 {
+  background: black;
+  color: white;
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 4px;
+  font-weight: bold;
+  animation: text1 4s 1;
+}
+
+@keyframes text1 {
+  0% {
+    letter-spacing: 5px;
+  }
+
+  30% {
+    letter-spacing: 3px;
+  }
+}
+
+p {
+  font-size: 17px;
+  animation: text 4s 1;
+}
+
+@keyframes text {
+  0% {
+    letter-spacing: 3px;
+  }
+
+  30% {
+    letter-spacing: 5px;
+  }
+}
+
+/**************fas fa-user-cog design - Footer*************/
+
+span {
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/***************Styling left anchor**************/
+
+.hover-effect {
+  position: relative;
+}
+
+.hover-effect::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  /* background-color: rgb(197, 188, 188); */
+  background-color: black;
+  bottom: 0%;
+  left: 50%;
+  top: 20px;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+
+.hover-effect:hover::after {
+  left: 0%;
+  width: 100%;
+}
